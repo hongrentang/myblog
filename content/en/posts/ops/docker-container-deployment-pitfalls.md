@@ -1,6 +1,7 @@
 ---
 title: "Docker Container Deployment Pitfalls Guide"
 date: 2025-01-27
+weight: 1401
 draft: false
 tags: ["ops"]
 featured: true

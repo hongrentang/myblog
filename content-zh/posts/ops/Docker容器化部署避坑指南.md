@@ -1,6 +1,7 @@
 ---
 title: "Docker 容器化部署避坑指南"
 date: 2025-01-27
+weight: 1401
 draft: false
 tags: ["ops"]
 featured: true
