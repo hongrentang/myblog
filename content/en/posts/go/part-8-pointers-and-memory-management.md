@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 8: Pointers and Memory Management"
 date: 2025-01-25
-weight: 8
+weight: 1208
 draft: false
 tags: ["go"]
 ---

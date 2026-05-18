@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 5: Arrays, Slices and Maps"
 date: 2025-01-22
-weight: 5
+weight: 1205
 draft: false
 tags: ["go"]
 ---

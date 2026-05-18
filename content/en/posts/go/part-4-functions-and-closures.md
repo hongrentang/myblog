@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 4: Functions and Closures"
 date: 2025-01-21
-weight: 4
+weight: 1204
 draft: false
 tags: ["go"]
 ---

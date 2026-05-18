@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 13: File Operations and I/O"
 date: 2025-01-05
-weight: 13
+weight: 1213
 draft: false
 tags: ["go"]
 ---

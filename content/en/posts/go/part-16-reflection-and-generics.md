@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 16: Reflection and Generics"
 date: 2025-01-08
-weight: 16
+weight: 1216
 draft: false
 tags: ["go"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 6: Structs and Custom Types"
 date: 2025-01-23
-weight: 6
+weight: 1206
 draft: false
 tags: ["go"]
 ---

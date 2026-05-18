@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 3: Flow Control"
 date: 2025-01-20
-weight: 3
+weight: 1203
 draft: false
 tags: ["go"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 2: Variables, Constants and Data Types"
 date: 2025-01-19
-weight: 2
+weight: 1202
 draft: false
 tags: ["go"]
 ---

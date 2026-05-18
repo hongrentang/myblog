@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 18: Common Standard Library"
 date: 2025-01-10
-weight: 18
+weight: 1218
 draft: false
 tags: ["go"]
 ---

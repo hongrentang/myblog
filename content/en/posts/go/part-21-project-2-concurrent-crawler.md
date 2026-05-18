@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 21: Project 2 — Concurrent Crawler"
 date: 2025-01-14
-weight: 21
+weight: 1221
 draft: false
 tags: ["go"]
 ---

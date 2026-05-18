@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 20: Project 1 — Command Line Tool"
 date: 2025-01-13
-weight: 20
+weight: 1220
 draft: false
 tags: ["go"]
 ---

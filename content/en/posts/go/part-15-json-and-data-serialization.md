@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 15: JSON and Data Serialization"
 date: 2025-01-07
-weight: 15
+weight: 1215
 draft: false
 tags: ["go"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 1: Introduction to Go and Environment Setup"
 date: 2025-01-12
-weight: 1
+weight: 1201
 draft: false
 tags: ["go"]
 featured: true

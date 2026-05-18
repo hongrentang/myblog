@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 25: Project 6 — URL Shortener"
 date: 2025-01-18
-weight: 25
+weight: 1225
 draft: false
 tags: ["go"]
 ---

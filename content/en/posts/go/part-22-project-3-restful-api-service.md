@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 22: Project 3 — RESTful API Service"
 date: 2025-01-15
-weight: 22
+weight: 1222
 draft: false
 tags: ["go"]
 ---

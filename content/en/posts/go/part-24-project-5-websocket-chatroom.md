@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 24: Project 5 — WebSocket Chat Room"
 date: 2025-01-17
-weight: 24
+weight: 1224
 draft: false
 tags: ["go"]
 ---

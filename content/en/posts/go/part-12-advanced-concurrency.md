@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 12: Advanced Concurrency"
 date: 2025-01-04
-weight: 12
+weight: 1212
 draft: false
 tags: ["go"]
 ---

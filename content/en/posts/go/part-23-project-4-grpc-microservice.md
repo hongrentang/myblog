@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 23: Project 4 — gRPC Microservice"
 date: 2025-01-16
-weight: 23
+weight: 1223
 draft: false
 tags: ["go"]
 ---

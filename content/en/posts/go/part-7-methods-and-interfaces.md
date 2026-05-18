@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 7: Methods and Interfaces"
 date: 2025-01-24
-weight: 7
+weight: 1207
 draft: false
 tags: ["go"]
 ---

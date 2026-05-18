@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 14: Network Programming"
 date: 2025-01-06
-weight: 14
+weight: 1214
 draft: false
 tags: ["go"]
 ---

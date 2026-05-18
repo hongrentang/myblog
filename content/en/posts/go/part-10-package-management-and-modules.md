@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 10: Package Management and Modules"
 date: 2025-01-02
-weight: 10
+weight: 1210
 draft: false
 tags: ["go"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 9: Error Handling"
 date: 2025-01-26
-weight: 9
+weight: 1209
 draft: false
 tags: ["go"]
 ---

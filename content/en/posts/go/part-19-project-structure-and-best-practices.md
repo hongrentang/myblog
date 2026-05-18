@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 19: Project Structure and Best Practices"
 date: 2025-01-11
-weight: 19
+weight: 1219
 draft: false
 tags: ["go"]
 ---

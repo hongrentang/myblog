@@ -1,7 +1,7 @@
 ---
 title: "Go from Beginner to Pro · Part 11: Introduction to Concurrency"
 date: 2025-01-03
-weight: 11
+weight: 1211
 draft: false
 tags: ["go"]
 ---
