@@ -1,7 +1,7 @@
 ---
 title: "Go 从入门到精通 · 第24篇：项目五 —— WebSocket 实时聊天室"
 date: 2025-01-17
-weight: 24
+weight: 1224
 draft: false
 tags: ["go"]
 ---

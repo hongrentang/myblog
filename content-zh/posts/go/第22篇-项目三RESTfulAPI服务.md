@@ -1,7 +1,7 @@
 ---
 title: "Go 从入门到精通 · 第22篇：项目三 —— RESTful API 服务"
 date: 2025-01-15
-weight: 22
+weight: 1222
 draft: false
 tags: ["go"]
 ---

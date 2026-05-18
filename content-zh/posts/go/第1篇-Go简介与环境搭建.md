@@ -1,7 +1,7 @@
 ---
 title: "Go 从入门到精通 · 第1篇：Go 简介与环境搭建"
 date: 2025-01-12
-weight: 1
+weight: 1201
 draft: false
 tags: ["go"]
 featured: true

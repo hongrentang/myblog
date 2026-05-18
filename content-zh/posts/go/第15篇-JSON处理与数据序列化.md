@@ -1,7 +1,7 @@
 ---
 title: "Go 从入门到精通 · 第15篇：JSON 处理与数据序列化"
 date: 2025-01-07
-weight: 15
+weight: 1215
 draft: false
 tags: ["go"]
 ---

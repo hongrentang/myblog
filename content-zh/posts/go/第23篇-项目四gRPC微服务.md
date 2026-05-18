@@ -1,7 +1,7 @@
 ---
 title: "Go 从入门到精通 · 第23篇：项目四 —— gRPC 微服务"
 date: 2025-01-16
-weight: 23
+weight: 1223
 draft: false
 tags: ["go"]
 ---
