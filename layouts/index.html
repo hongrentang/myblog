@@ -1,0 +1,106 @@
+{{- define "main" }}
+{{- $filteredPages := slice -}}
+{{- range .Site.RegularPages -}}
+  {{- if and (in .File.Path "posts/") (ne .Params.hiddenInHomeList true) -}}
+    {{- $filteredPages = $filteredPages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $featured := where $filteredPages "Params.featured" true -}}
+{{- if gt (len $featured) 0 }}
+<div class="carousel-wrap">
+  <div class="carousel" id="carousel">
+    <div class="carousel-inner">
+      {{- range $i, $page := $featured }}
+      <div class="carousel-slide{{ if eq $i 0 }} active{{ end }}">
+        <a href="{{ $page.Permalink }}">
+          {{- $cover := $page.Resources.GetMatch (printf "**%s" ($page.Params.cover.image | default "")) }}
+          {{- if $page.Params.cover.image }}
+          <img src="{{ $page.Params.cover.image | absURL }}" alt="{{ $page.Title }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+          {{- else }}
+          <div class="carousel-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+            <span>{{ $page.Title }}</span>
+          </div>
+          {{- end }}
+          <div class="carousel-overlay">
+            <h3>{{ $page.Title }}</h3>
+            {{- with $page.Params.cover.caption }}
+            <p>{{ . }}</p>
+            {{- end }}
+          </div>
+        </a>
+      </div>
+      {{- end }}
+    </div>
+    {{- if gt (len $featured) 1 }}
+    <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Previous">‹</button>
+    <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" aria-label="Next">›</button>
+    <div class="carousel-dots">
+      {{- range $i, $page := $featured }}
+      <span class="carousel-dot{{ if eq $i 0 }} active{{ end }}" onclick="goToSlide({{ $i }})"></span>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
+
+{{- if (and site.Params.homeInfoParams (eq (.Paginate $filteredPages).PageNumber 1)) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- $pages := $filteredPages }}
+{{- $paginator := .Paginate $pages }}
+{{- range $index, $page := $paginator.Pages }}
+{{- $class := "post-entry" }}
+{{- if (and (eq $paginator.PageNumber 1) (eq $index 0) (not site.Params.disableSpecial1stPost) (not site.Params.homeInfoParams)) }}
+{{- $class = "first-entry" }}
+{{- end }}
+<article class="{{ $class }}">
+  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      {{- .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h2>
+  </header>
+  {{- if (ne (.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+  {{- if not (.Param "hideMeta") }}
+  <footer class="entry-footer">
+    {{- partial "post_meta.html" . -}}
+  </footer>
+  {{- end }}
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}{{ sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}{{ end }}
+    </a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+      {{- i18n "next_page" }}&nbsp;
+      {{- if (.Param "ShowPageNums") }}{{ add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}{{ end }}&nbsp;»
+    </a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}{{/* end main */}}

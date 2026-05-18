@@ -1,0 +1,85 @@
+/* 右侧固定 TOC */
+.post-single > .toc {
+  position: fixed;
+  right: 1rem;
+  top: 6rem;
+  width: 260px;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+  font-size: 0.85em;
+  border-left: 1px solid var(--border);
+  padding-left: 1rem;
+  margin: 0;
+  background: var(--theme);
+  z-index: 1;
+}
+
+.post-single > .toc details {
+  background: transparent;
+}
+
+.post-single > .toc summary {
+  cursor: default;
+  list-style: none;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.post-single > .toc summary::marker,
+.post-single > .toc summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-single > .toc .inner {
+  padding: 0;
+}
+
+.post-single > .toc ul {
+  list-style: none;
+  padding-left: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.post-single > .toc > .inner > ul {
+  padding-left: 0;
+}
+
+.post-single > .toc li {
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.post-single > .toc a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.post-single > .toc a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* 滚动高亮当前章节 */
+.post-single > .toc .active {
+  color: var(--primary);
+  font-weight: 600;
+  border-left: 2px solid var(--primary);
+  padding-left: calc(1rem - 2px);
+  margin-left: -1rem;
+}
+
+/* 小屏幕时隐藏右侧 TOC，回退到内嵌样式 */
+@media (max-width: 1400px) {
+  .post-single > .toc {
+    position: static;
+    width: auto;
+    max-height: none;
+    overflow-y: visible;
+    border-left: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: transparent;
+  }
+}

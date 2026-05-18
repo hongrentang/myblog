@@ -1,0 +1,7 @@
+public/
+.hugo_build.lock
+resources/
+.hugo_config.json
+.DS_Store
+*.swp
+*.swo

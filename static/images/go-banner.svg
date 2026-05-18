@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00ADD8"/><stop offset="100%" style="stop-color:#007099"/></linearGradient></defs>
+  <rect width="800" height="340" fill="url(#g)"/>
+  <text x="40" y="180" font-family="monospace" font-size="64" font-weight="bold" fill="white">Go</text>
+  <text x="40" y="240" font-family="sans-serif" font-size="24" fill="rgba(255,255,255,0.8)">从入门到精通</text>
+</svg>

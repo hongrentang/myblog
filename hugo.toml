@@ -1,0 +1,97 @@
+baseURL = 'https://blog.777.xyz/'
+theme = 'PaperMod'
+defaultContentLanguage = 'zh-cn'
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+  pagerSize = 10
+
+# 语言无关的全局参数
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  disableSpecial1stPost = true
+  ShowToc = true
+  TocOpen = true
+  disableHLJS = true
+  linkFullImages = true
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/"
+
+  [[params.editPost]]
+    URL = "https://github.com/"
+    Text = "Suggest Changes"
+
+###############################
+# 中文
+###############################
+[languages.zh-cn]
+  languageCode = 'zh-cn'
+  languageName = '中文'
+  title = '我的博客'
+  weight = 1
+  contentDir = 'content-zh'
+
+  [languages.zh-cn.params]
+    description = "个人博客"
+
+  [languages.zh-cn.menu]
+    [[languages.zh-cn.menu.main]]
+      identifier = "archives"
+      name = "归档"
+      url = "/archives/"
+      weight = 10
+    [[languages.zh-cn.menu.main]]
+      identifier = "search"
+      name = "搜索"
+      url = "/search/"
+      weight = 20
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      name = "标签"
+      url = "/tags/"
+      weight = 30
+
+###############################
+# English
+###############################
+[languages.en]
+  languageCode = 'en-us'
+  languageName = 'English'
+  title = 'My Blog'
+  weight = 2
+  contentDir = 'content/en'
+
+  [languages.en.params]
+    description = "Personal Blog"
+
+  [languages.en.menu]
+    [[languages.en.menu.main]]
+      identifier = "archives"
+      name = "Archives"
+      url = "/en/archives/"
+      weight = 10
+    [[languages.en.menu.main]]
+      identifier = "search"
+      name = "Search"
+      url = "/en/search/"
+      weight = 20
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/en/tags/"
+      weight = 30
