@@ -1,7 +1,7 @@
 ---
 title: "MySQL 从入门到精通 · 第13篇：SQL 注入防御与安全实践"
 date: 2025-01-17
-weight: 13
+weight: 1313
 draft: false
 tags: ["mysql"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 12: User Privileges and Security"
 date: 2025-01-16
-weight: 12
+weight: 1312
 draft: false
 tags: ["mysql"]
 ---

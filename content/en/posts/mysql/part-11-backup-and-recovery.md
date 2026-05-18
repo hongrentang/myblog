@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 11: Backup and Recovery"
 date: 2025-01-15
-weight: 11
+weight: 1311
 draft: false
 tags: ["mysql"]
 ---

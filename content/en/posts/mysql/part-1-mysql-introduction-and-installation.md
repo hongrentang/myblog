@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 1: MySQL Introduction and Installation"
 date: 2025-01-21
-weight: 1
+weight: 1301
 draft: false
 tags: ["mysql"]
 featured: true

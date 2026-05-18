@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 4: CRUD Operations"
 date: 2025-01-24
-weight: 4
+weight: 1304
 draft: false
 tags: ["mysql"]
 ---

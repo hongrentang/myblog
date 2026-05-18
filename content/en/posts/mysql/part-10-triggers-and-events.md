@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 10: Triggers and Events"
 date: 2025-01-14
-weight: 10
+weight: 1310
 draft: false
 tags: ["mysql"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 9: Stored Procedures and Functions"
 date: 2025-01-01
-weight: 9
+weight: 1309
 draft: false
 tags: ["mysql"]
 ---

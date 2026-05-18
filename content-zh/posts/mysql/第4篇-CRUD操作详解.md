@@ -1,7 +1,7 @@
 ---
 title: "MySQL 从入门到精通 · 第4篇：CRUD 操作详解"
 date: 2025-01-24
-weight: 4
+weight: 1304
 draft: false
 tags: ["mysql"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 7: Index Principles and Optimization"
 date: 2025-01-27
-weight: 7
+weight: 1307
 draft: false
 tags: ["mysql"]
 ---

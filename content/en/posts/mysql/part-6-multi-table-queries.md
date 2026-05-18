@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 6: Multi-Table Queries"
 date: 2025-01-26
-weight: 6
+weight: 1306
 draft: false
 tags: ["mysql"]
 ---

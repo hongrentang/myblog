@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 14: Performance Monitoring and Slow Query Optimization"
 date: 2025-01-18
-weight: 14
+weight: 1314
 draft: false
 tags: ["mysql"]
 ---

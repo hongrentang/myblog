@@ -1,7 +1,7 @@
 ---
 title: "MySQL 从入门到精通 · 第1篇：MySQL 简介与安装"
 date: 2025-01-21
-weight: 1
+weight: 1301
 draft: false
 tags: ["mysql"]
 featured: true

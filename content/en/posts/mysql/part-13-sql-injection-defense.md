@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 13: SQL Injection Defense"
 date: 2025-01-17
-weight: 13
+weight: 1313
 draft: false
 tags: ["mysql"]
 ---

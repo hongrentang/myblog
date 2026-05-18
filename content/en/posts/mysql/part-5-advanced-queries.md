@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 5: Advanced Queries"
 date: 2025-01-25
-weight: 5
+weight: 1305
 draft: false
 tags: ["mysql"]
 ---

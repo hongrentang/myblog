@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 2: Database and Table Basics"
 date: 2025-01-22
-weight: 2
+weight: 1302
 draft: false
 tags: ["mysql"]
 ---

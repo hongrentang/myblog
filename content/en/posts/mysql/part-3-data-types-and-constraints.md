@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 3: Data Types and Constraints"
 date: 2025-01-23
-weight: 3
+weight: 1303
 draft: false
 tags: ["mysql"]
 ---

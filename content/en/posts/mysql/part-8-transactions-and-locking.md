@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 8: Transactions and Locking"
 date: 2025-01-28
-weight: 8
+weight: 1308
 draft: false
 tags: ["mysql"]
 ---

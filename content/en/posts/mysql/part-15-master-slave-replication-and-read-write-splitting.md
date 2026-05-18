@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 15: Master-Slave Replication and Read-Write Splitting"
 date: 2025-01-19
-weight: 15
+weight: 1315
 draft: false
 tags: ["mysql"]
 ---

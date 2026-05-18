@@ -1,7 +1,7 @@
 ---
 title: "MySQL from Beginner to Pro · Part 16: Table Partitioning and Sharding"
 date: 2025-01-20
-weight: 16
+weight: 1316
 draft: false
 tags: ["mysql"]
 ---
