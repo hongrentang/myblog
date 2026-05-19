@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="box-app" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <linearGradient id="box-coredns" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+    <linearGradient id="box-upstream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe"/>
+      <stop offset="100%" style="stop-color:#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="box-node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b"/>
+      <stop offset="100%" style="stop-color:#38f9d7"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#43e97b"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f5576c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bg)" rx="10"/>
+
+  <!-- Title -->
+  <text x="450" y="45" font-family="monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">DNS Resolution Timeout — Troubleshooting Flow</text>
+
+  <!-- Node 1: Application -->
+  <rect x="60" y="100" width="160" height="60" rx="8" fill="url(#box-app)" filter="url(#shadow)"/>
+  <text x="140" y="135" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Application Pod</text>
+
+  <!-- Node 2: CoreDNS -->
+  <rect x="370" y="100" width="160" height="60" rx="8" fill="url(#box-coredns)" filter="url(#shadow)"/>
+  <text x="450" y="120" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">CoreDNS</text>
+  <text x="450" y="140" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">kube-system</text>
+
+  <!-- Node 3: Upstream DNS -->
+  <rect x="680" y="100" width="160" height="60" rx="8" fill="url(#box-upstream)" filter="url(#shadow)"/>
+  <text x="760" y="130" font-family="monospace" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Upstream DNS</text>
+
+  <!-- Node 4: resolv.conf -->
+  <rect x="60" y="300" width="160" height="60" rx="8" fill="url(#box-node)" filter="url(#shadow)"/>
+  <text x="140" y="335" font-family="monospace" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">resolv.conf</text>
+
+  <!-- Node 5: ndots -->
+  <rect x="370" y="300" width="160" height="60" rx="8" fill="url(#box-node)" filter="url(#shadow)"/>
+  <text x="450" y="330" font-family="monospace" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">ndots:5</text>
+  <text x="450" y="348" font-family="monospace" font-size="11" fill="#1a1a2e" text-anchor="middle">search domain</text>
+
+  <!-- Connection: App → CoreDNS (step 1) -->
+  <line x1="220" y1="130" x2="360" y2="130" stroke="#43e97b" stroke-width="2.5" marker-end="url(#arrow-green)" stroke-dasharray="6,3"/>
+  <text x="290" y="120" font-family="monospace" font-size="11" fill="#43e97b" text-anchor="middle">① query</text>
+
+  <!-- Connection: CoreDNS → Upstream (step 2, FAIL) -->
+  <line x1="530" y1="130" x2="670" y2="130" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <text x="600" y="120" font-family="monospace" font-size="11" fill="#f5576c" text-anchor="middle">② 5s timeout ✗</text>
+
+  <!-- Red X over upstream -->
+  <text x="760" y="200" font-family="monospace" font-size="40" fill="#f5576c" text-anchor="middle" font-weight="bold">✗</text>
+  <text x="760" y="220" font-family="monospace" font-size="12" fill="#f5576c" text-anchor="middle">not reachable</text>
+
+  <!-- Connection: CoreDNS → App (step 3, failure response) -->
+  <line x1="450" y1="160" x2="140" y2="160" stroke="#f5576c" stroke-width="2.5" marker-end="url(#arrow-red)" stroke-dasharray="6,3"/>
+  <text x="295" y="175" font-family="monospace" font-size="11" fill="#f5576c" text-anchor="middle">③ nxdomain/timeout</text>
+
+  <!-- Pod → resolv.conf (ndots check) -->
+  <line x1="140" y1="160" x2="140" y2="290" stroke="#ffd700" stroke-width="2" marker-end="url(#arrow-green)" stroke-dasharray="4,4"/>
+  <text x="155" y="230" font-family="monospace" font-size="11" fill="#ffd700">ndots &gt; 5 → search</text>
+
+  <!-- resolv.conf → ndots -->
+  <line x1="220" y1="330" x2="360" y2="330" stroke="#ffd700" stroke-width="2" marker-end="url(#arrow-green)" stroke-dasharray="4,4"/>
+  <text x="290" y="320" font-family="monospace" font-size="11" fill="#ffd700" text-anchor="middle">multiple search domains</text>
+
+  <!-- Debug commands box -->
+  <rect x="370" y="400" width="460" height="80" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="390" y="422" font-family="monospace" font-size="12" fill="#43e97b">$ kubectl exec -it pod -- nslookup service.namespace.svc.cluster.local</text>
+  <text x="390" y="442" font-family="monospace" font-size="12" fill="#43e97b">$ kubectl exec -it pod -- cat /etc/resolv.conf</text>
+  <text x="390" y="462" font-family="monospace" font-size="12" fill="#f5576c">$ kubectl logs -n kube-system -l k8s-app=kube-dns --tail=50</text>
+
+  <!-- Step labels -->
+  <text x="60" y="85" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Step 1: Pod sends DNS query</text>
+  <text x="370" y="85" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Step 2: CoreDNS forwards to upstream</text>
+  <text x="60" y="285" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Common pitfall: ndots + search domains cause extra queries</text>
+</svg>
