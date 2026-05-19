@@ -18,7 +18,7 @@ enableRobotsTXT = true
 # 语言无关的全局参数
 [params]
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
