@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b894"/>
+      <stop offset="100%" style="stop-color:#006266"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#g)"/>
+  <text x="40" y="150" font-family="monospace" font-size="56" font-weight="bold" fill="white">GPU OOM</text>
+  <text x="40" y="200" font-family="sans-serif" font-size="22" fill="rgba(255,255,255,0.8)">GPU Out of Memory Troubleshooting</text>
+  <text x="40" y="250" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.5)">CUDA OOM  |  nvidia-smi  |  GPU memory leak  |  batch size  |  model serving</text>
+</svg>
