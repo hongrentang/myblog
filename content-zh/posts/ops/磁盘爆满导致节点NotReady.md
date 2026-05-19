@@ -8,6 +8,10 @@ categories: ["存储"]
 description: "K8S Node NotReady 根因是磁盘爆满，从误判网络故障到清理日志恢复的排查过程"
 keywords: "kubernetes node not ready 解决,k8s 节点磁盘爆满,pod evicted 磁盘压力,节点状态 NotReady"
 draft: false
+featured: true
+cover:
+  image: "/images/disk-full-banner.svg"
+  caption: "磁盘爆满导致 Node NotReady 排查记录"
 ---
 
 # 磁盘爆满导致 Node NotReady

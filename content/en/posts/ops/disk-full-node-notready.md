@@ -8,6 +8,10 @@ categories: ["Storage"]
 description: "Kubernetes Node NotReady troubleshooting — from misdiagnosing Calico to finding the root cause was a full root disk"
 keywords: "kubernetes node not ready disk pressure, k8s node disk full, pod evicted disk pressure, container log rotation"
 draft: false
+featured: true
+cover:
+  image: "/images/disk-full-banner.svg"
+  caption: "Disk Full — Node NotReady Troubleshooting"
 ---
 
 # Disk Full Causing Node NotReady

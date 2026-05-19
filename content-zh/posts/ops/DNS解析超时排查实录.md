@@ -8,6 +8,10 @@ categories: ["网络"]
 description: "完整复盘一次因 CoreDNS 上游超时导致全站接口延迟飙升的故障 — 从误判应用层到定位 DNS 链路"
 keywords: "dns解析超时, coredns超时, kubernetes dns故障, dns排查, ndots配置"
 draft: false
+featured: true
+cover:
+  image: "/images/dns-timeout-banner.svg"
+  caption: "DNS 解析超时排查实录"
 ---
 
 # DNS 解析超时导致微服务调用异常

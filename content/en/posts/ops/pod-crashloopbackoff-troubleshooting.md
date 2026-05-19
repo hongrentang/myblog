@@ -8,6 +8,10 @@ categories: ["K8S"]
 description: "Full walkthrough of diagnosing Pod CrashLoopBackOff — from misdiagnosing OOM to finding a ConfigMap key mismatch"
 keywords: "k8s pod crashloopbackoff, pod keeps restarting, kubernetes crashloopbackoff fix, configmap troubleshooting"
 draft: false
+featured: true
+cover:
+  image: "/images/crashloopbackoff-banner.svg"
+  caption: "Pod CrashLoopBackOff Troubleshooting & Diagnostics"
 ---
 
 # Pod CrashLoopBackOff Troubleshooting

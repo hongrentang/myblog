@@ -8,6 +8,10 @@ categories: ["K8S"]
 description: "K8S Pod CrashLoopBackOff 解决全过程，从误判 OOM 到找到 ConfigMap 配置错误的排查链路"
 keywords: "k8s pod crashloopbackoff解决,pod一直重启,configmap配置错误,kubernetes排障"
 draft: false
+featured: true
+cover:
+  image: "/images/crashloopbackoff-banner.svg"
+  caption: "Pod CrashLoopBackOff 排查与诊断"
 ---
 
 # Pod CrashLoopBackOff 排查实录

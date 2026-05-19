@@ -8,6 +8,10 @@ categories: ["网络"]
 description: "Full postmortem of a CoreDNS upstream timeout causing site-wide latency spikes — from misdiagnosing the application layer to pinpointing the DNS chain"
 keywords: "dns resolution timeout, coredns timeout, kubernetes dns failure, dns troubleshooting, ndots configuration"
 draft: false
+featured: true
+cover:
+  image: "/images/dns-timeout-banner.svg"
+  caption: "DNS Resolution Timeout — CoreDNS Upstream Failure"
 ---
 
 # DNS Resolution Timeout Causing Microservice Latency Spikes
