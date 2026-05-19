@@ -5,6 +5,7 @@
     {{- $filteredPages = $filteredPages | append . -}}
   {{- end -}}
 {{- end -}}
+{{- $filteredPages = sort $filteredPages "Weight" "desc" -}}
 {{- $featured := where $filteredPages "Params.featured" true -}}
 {{- if gt (len $featured) 0 }}
 <div class="carousel-wrap">
