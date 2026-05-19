@@ -1,7 +1,7 @@
 ---
 title: "Pod CrashLoopBackOff Troubleshooting: A ConfigMap Mismatch That Took Down Order Service"
 date: 2026-05-19
-slug: "k8s-pod-crashloopbackoff-configmap"
+slug: "pod-crashloopbackoff-troubleshooting"
 tags: ["kubernetes", "troubleshooting"]
 categories: ["K8S"]
 description: "Full walkthrough of diagnosing Pod CrashLoopBackOff — from misdiagnosing OOM to finding a ConfigMap key mismatch"
