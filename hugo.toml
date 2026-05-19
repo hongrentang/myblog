@@ -10,6 +10,10 @@ enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
+  
+[services]
+  [services.googleAnalytics]
+    ID = "G-YS4DXJ24QT"
 
 # 语言无关的全局参数
 [params]
