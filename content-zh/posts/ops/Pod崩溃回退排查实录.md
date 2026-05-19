@@ -1,7 +1,7 @@
 ---
 title: "Pod CrashLoopBackOff 排查实录：ConfigMap 配错导致订单服务中断"
 date: 2026-05-19
-weight: 99000
+weight: 10
 slug: "k8s-pod-crashloopbackoff-configmap"
 tags: ["kubernetes", "troubleshooting"]
 categories: ["K8S"]
