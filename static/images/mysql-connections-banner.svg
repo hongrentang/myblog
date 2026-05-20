@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00758f"/>
+      <stop offset="100%" style="stop-color:#005a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#g)"/>
+  <text x="40" y="130" font-family="sans-serif" font-size="48" font-weight="bold" fill="white">MySQL</text>
+  <text x="40" y="185" font-family="monospace" font-size="40" font-weight="bold" fill="white">Too Many Connections</text>
+  <text x="40" y="245" font-family="sans-serif" font-size="22" fill="rgba(255,255,255,0.8)">连接数爆满导致服务雪崩排查</text>
+  <text x="40" y="290" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.5)">max_connections  |  processlist  |  slow query  |  HikariPool timeout</text>
+</svg>
