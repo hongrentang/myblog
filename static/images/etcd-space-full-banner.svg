@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="100%" style="stop-color:#1a252f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#g)"/>
+  <text x="40" y="130" font-family="monospace" font-size="46" font-weight="bold" fill="white">ETCD Space Full</text>
+  <text x="40" y="185" font-family="monospace" font-size="30" font-weight="bold" fill="#e74c3c">NOSPACE</text>
+  <text x="40" y="240" font-family="sans-serif" font-size="22" fill="rgba(255,255,255,0.8)">K8S 集群完全不可用 90 分钟</text>
+  <text x="40" y="285" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.5)">kubectl refused  |  etcdctl compact  |  defrag  |  alarm disarm</text>
+</svg>
