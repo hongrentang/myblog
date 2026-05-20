@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e44ad"/>
+      <stop offset="100%" style="stop-color:#6c3483"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#g)"/>
+  <text x="40" y="130" font-family="monospace" font-size="52" font-weight="bold" fill="white">inode</text>
+  <text x="40" y="190" font-family="monospace" font-size="52" font-weight="bold" fill="white">Exhausted</text>
+  <text x="40" y="245" font-family="sans-serif" font-size="22" fill="rgba(255,255,255,0.8)">df -h says 24% used — but no space left</text>
+  <text x="40" y="285" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.5)">df -i 100%  |  find  |  postfix maildrop  |  1.1M files</text>
+</svg>
