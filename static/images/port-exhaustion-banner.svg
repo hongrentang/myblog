@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2027"/>
+      <stop offset="50%" style="stop-color:#203a43"/>
+      <stop offset="100%" style="stop-color:#2c5364"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#3a7bd5"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="340" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="url(#accent)"/>
+  <!-- Grid background -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="160" x2="800" y2="160"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="160" y1="0" x2="160" y2="340"/>
+    <line x1="320" y1="0" x2="320" y2="340"/>
+    <line x1="480" y1="0" x2="480" y2="340"/>
+    <line x1="640" y1="0" x2="640" y2="340"/>
+  </g>
+  <!-- Connection lines (visualizing port exhaustion) -->
+  <g stroke="#00d2ff" stroke-opacity="0.15" stroke-width="1">
+    <line x1="80" y1="180" x2="200" y2="120"/>
+    <line x1="80" y1="180" x2="200" y2="140"/>
+    <line x1="80" y1="180" x2="200" y2="160"/>
+    <line x1="80" y1="180" x2="200" y2="180"/>
+    <line x1="80" y1="180" x2="200" y2="200"/>
+    <line x1="80" y1="180" x2="200" y2="220"/>
+    <line x1="80" y1="180" x2="200" y2="240"/>
+  </g>
+  <!-- Blocked connection -->
+  <g stroke="#ff4444" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="6,4">
+    <line x1="80" y1="180" x2="200" y2="260"/>
+  </g>
+  <!-- Server nodes -->
+  <circle cx="80" cy="180" r="28" fill="none" stroke="#00d2ff" stroke-width="2"/>
+  <text x="80" y="185" text-anchor="middle" fill="#00d2ff" font-family="monospace" font-size="12" font-weight="bold">APP</text>
+  <rect x="300" y="100" width="60" height="40" rx="4" fill="none" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="330" y="124" text-anchor="middle" fill="#3a7bd5" font-family="monospace" font-size="9">:8080</text>
+  <rect x="300" y="155" width="60" height="40" rx="4" fill="none" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="330" y="179" text-anchor="middle" fill="#3a7bd5" font-family="monospace" font-size="9">:8081</text>
+  <rect x="300" y="210" width="60" height="40" rx="4" fill="none" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="330" y="234" text-anchor="middle" fill="#3a7bd5" font-family="monospace" font-size="9">:8082</text>
+  <!-- Port pool visualization -->
+  <rect x="420" y="105" width="160" height="160" rx="6" fill="none" stroke="#00d2ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="500" y="95" text-anchor="middle" fill="#3a7bd5" font-family="monospace" font-size="10">Ephemeral Port Pool</text>
+  <!-- Port slots -->
+  <rect x="432" y="115" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="468" y="115" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="504" y="115" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="540" y="115" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="432" y="134" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="468" y="134" width="30" height="14" rx="2" fill="#00d2ff" opacity="0.4"/>
+  <rect x="504" y="134" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="540" y="134" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="432" y="153" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="468" y="153" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="504" y="153" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="540" y="153" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="432" y="172" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="468" y="172" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="504" y="172" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="540" y="172" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="432" y="191" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="468" y="191" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="504" y="191" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <rect x="540" y="191" width="30" height="14" rx="2" fill="#ff4444" opacity="0.5"/>
+  <text x="556" y="145" fill="#ff4444" font-family="monospace" font-size="9">TIME_WAIT</text>
+  <text x="556" y="165" fill="#ff4444" font-family="monospace" font-size="9">× N</text>
+  <!-- Error text -->
+  <text x="620" y="160" fill="#ff4444" font-family="monospace" font-size="11" font-weight="bold" filter="url(#glow)">cannot assign</text>
+  <text x="620" y="178" fill="#ff4444" font-family="monospace" font-size="11" font-weight="bold" filter="url(#glow)">requested addr</text>
+  <!-- Title -->
+  <text x="400" y="290" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="22" font-weight="bold">TCP Port Exhaustion</text>
+  <text x="400" y="316" text-anchor="middle" fill="#3a7bd5" font-family="monospace" font-size="13">从 TIME_WAIT 堆积到连接池优化</text>
+</svg>
