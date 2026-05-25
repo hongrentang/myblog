@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="50%" style="stop-color:#1a0000"/>
+      <stop offset="100%" style="stop-color:#0a0500"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff3333"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="340" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="url(#accent)"/>
+  <g stroke="#ffffff" stroke-opacity="0.02" stroke-width="1">
+    <line x1="0" y1="85" x2="800" y2="85"/><line x1="0" y1="170" x2="800" y2="170"/>
+    <line x1="0" y1="255" x2="800" y2="255"/><line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/><line x1="600" y1="0" x2="600" y2="340"/>
+  </g>
+  <!-- Memory bar -->
+  <rect x="40" y="30" width="180" height="150" rx="6" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="130" y="52" text-anchor="middle" fill="#888" font-family="monospace" font-size="10">System Memory 64GB</text>
+  <rect x="55" y="65" width="150" height="20" rx="2" fill="#ff3333" opacity="0.8"/>
+  <text x="75" y="79" fill="#fff" font-family="monospace" font-size="9">Java (47GB)</text>
+  <rect x="55" y="88" width="150" height="15" rx="2" fill="#ff6b35" opacity="0.6"/>
+  <text x="75" y="99" fill="#fff" font-family="monospace" font-size="8">Monitoring Agent</text>
+  <rect x="55" y="106" width="80" height="12" rx="2" fill="#ff6b35" opacity="0.4"/>
+  <text x="70" y="115" fill="#fff" font-family="monospace" font-size="7">Other</text>
+  <rect x="55" y="121" width="150" height="12" rx="2" fill="#ff6b35" opacity="0.3"/>
+  <text x="70" y="130" fill="#fff" font-family="monospace" font-size="7">Page Cache / Buffers</text>
+  <rect x="55" y="136" width="30" height="12" rx="2" fill="#ff4444" opacity="0.5"/>
+  <text x="70" y="145" fill="#ff4444" font-family="monospace" font-size="7">OOM</text>
+  <rect x="55" y="151" width="150" height="12" rx="2" fill="none" stroke="#ff4444" stroke-dasharray="3,2" stroke-width="1"/>
+  <text x="70" y="160" fill="#ff4444" font-family="monospace" font-size="7">Overcommit</text>
+  <!-- Arrow to target -->
+  <line x1="225" y1="90" x2="260" y2="90" stroke="#ff3333" stroke-width="2"/>
+  <polygon points="260,85 270,90 260,95" fill="#ff3333"/>
+  <!-- Target process -->
+  <rect x="275" y="50" width="220" height="80" rx="6" fill="#1a0000" stroke="#ff3333" stroke-width="1.5"/>
+  <text x="385" y="75" text-anchor="middle" fill="#ff3333" font-family="monospace" font-size="13" font-weight="bold" filter="url(#glow)">OOM Killer</text>
+  <text x="385" y="98" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="10">selected pid=2345</text>
+  <text x="385" y="118" text-anchor="middle" fill="#888" font-family="monospace" font-size="9">oom_score_adj: 0 (default)</text>
+  <!-- dmesg output -->
+  <rect x="275" y="140" width="220" height="55" rx="4" fill="#0a0500" stroke="#ff3333" stroke-width="1"/>
+  <text x="290" y="158" fill="#ff3333" font-family="monospace" font-size="8" filter="url(#glow)">Killed process 2345 (java)</text>
+  <text x="290" y="173" fill="#ff6b35" font-family="monospace" font-size="8">total-vm: 48123456kB</text>
+  <text x="290" y="188" fill="#888" font-family="monospace" font-size="8">oom_reaper: reaped process 2345</text>
+  <!-- Impacts -->
+  <rect x="520" y="40" width="250" height="160" rx="6" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="645" y="62" text-anchor="middle" fill="#ff3333" font-family="monospace" font-size="11" font-weight="bold">Symptoms</text>
+  <text x="540" y="85" fill="#888" font-family="monospace" font-size="9">✗ No crash log / hs_err</text>
+  <text x="540" y="105" fill="#888" font-family="monospace" font-size="9">✗ No Java heap dump</text>
+  <text x="540" y="125" fill="#888" font-family="monospace" font-size="9">✗ Process just "disappeared"</text>
+  <text x="540" y="145" fill="#888" font-family="monospace" font-size="9">✗ dmesg shows the truth</text>
+  <text x="645" y="175" text-anchor="middle" fill="#ff3333" font-family="monospace" font-size="9" filter="url(#glow)">"No such process"</text>
+  <!-- Title -->
+  <text x="400" y="270" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="22" font-weight="bold">OOM Killer</text>
+  <text x="400" y="296" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="13">当 Java 进程凭空消失</text>
+  <text x="400" y="325" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">没有日志、没有 Dump、没有错误——进程就这么"没"了</text>
+</svg>
