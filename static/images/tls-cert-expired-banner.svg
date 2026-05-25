@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a00"/>
+      <stop offset="50%" style="stop-color:#2d1500"/>
+      <stop offset="100%" style="stop-color:#0a0500"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#e63900"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="340" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="url(#accent)"/>
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="85" x2="800" y2="85"/><line x1="0" y1="170" x2="800" y2="170"/>
+    <line x1="0" y1="255" x2="800" y2="255"/><line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/><line x1="600" y1="0" x2="600" y2="340"/>
+  </g>
+  <!-- Certificate icon -->
+  <rect x="50" y="45" width="150" height="110" rx="6" fill="none" stroke="#ff6b35" stroke-width="1.5"/>
+  <rect x="60" y="55" width="130" height="20" rx="2" fill="#ff6b35" opacity="0.2"/>
+  <text x="125" y="69" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="9" font-weight="bold">Certificate</text>
+  <text x="125" y="90" text-anchor="middle" fill="#888" font-family="monospace" font-size="8">Subject: *.example.com</text>
+  <text x="125" y="106" text-anchor="middle" fill="#888" font-family="monospace" font-size="8">Issuer: Let's Encrypt</text>
+  <text x="125" y="122" text-anchor="middle" fill="#ff4444" font-family="monospace" font-size="8" font-weight="bold">Expired: 2026-05-20</text>
+  <text x="125" y="140" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">Not After: May 20 00:00:00</text>
+  <!-- X -->
+  <text x="220" y="105" text-anchor="middle" fill="#ff4444" font-family="monospace" font-size="28" font-weight="bold">✗</text>
+  <!-- TLS Handshake -->
+  <rect x="260" y="40" width="220" height="120" rx="6" fill="#1a0a00" stroke="#ff6b35" stroke-width="1" opacity="0.8"/>
+  <text x="370" y="60" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="10" font-weight="bold">TLS Handshake</text>
+  <text x="290" y="80" fill="#888" font-family="monospace" font-size="8">ClientHello → ServerHello</text>
+  <text x="290" y="97" fill="#888" font-family="monospace" font-size="8">Certificate → verify</text>
+  <text x="290" y="114" fill="#ff4444" font-family="monospace" font-size="8" filter="url(#glow)">✗ certificate has expired</text>
+  <text x="290" y="131" fill="#888" font-family="monospace" font-size="8">Alert: bad_certificate</text>
+  <text x="290" y="148" fill="#666" font-family="monospace" font-size="8">SSL_ERROR_EXPIRED_CERTIFICATE</text>
+  <!-- Browser error -->
+  <rect x="510" y="40" width="250" height="75" rx="4" fill="#1a0500" stroke="#ff4444" stroke-width="1"/>
+  <text x="635" y="62" text-anchor="middle" fill="#ff4444" font-family="monospace" font-size="10" font-weight="bold" filter="url(#glow)">NET::ERR_CERT_DATE_INVALID</text>
+  <text x="635" y="82" text-anchor="middle" fill="#888" font-family="monospace" font-size="9">Your connection is not private</text>
+  <text x="635" y="100" text-anchor="middle" fill="#666" font-family="monospace" font-size="8"> attackers might try to steal your info</text>
+  <!-- Timeline -->
+  <rect x="510" y="128" width="250" height="35" rx="4" fill="none" stroke="#333" stroke-width="1"/>
+  <line x1="520" y1="145" x2="750" y2="145" stroke="#555" stroke-width="1"/>
+  <text x="530" y="142" fill="#76b900" font-family="monospace" font-size="7">issued</text>
+  <text x="580" y="142" fill="#888" font-family="monospace" font-size="7">valid</text>
+  <text x="690" y="142" fill="#ff4444" font-family="monospace" font-size="7">expired</text>
+  <line x1="690" y1="140" x2="690" y2="150" stroke="#ff4444" stroke-width="1.5"/>
+  <circle cx="525" cy="145" r="3" fill="#76b900"/>
+  <circle cx="690" cy="145" r="3" fill="#ff4444"/>
+  <!-- Title -->
+  <text x="400" y="240" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="22" font-weight="bold">TLS Certificate Expired</text>
+  <text x="400" y="265" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="13">从 SSL_ERROR 到证书全生命周期管理</text>
+  <text x="400" y="295" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">证书过期的一瞬间，你所有的 HTTPS 服务同时挂了</text>
+</svg>
