@@ -8,3 +8,6 @@ resources/
 
 # 微信推送脚本（含 API 密钥）
 push_wechat.py
+
+# 环境变量文件（含 API 密钥）
+.env
