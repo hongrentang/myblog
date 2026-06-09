@@ -639,4 +639,4 @@ The CNI network plugin is the backbone of pod communication in Kubernetes. This 
 
 ---
 
-*This article is part of the Kubernetes Troubleshooting series. For more real-world incident analysis, see the [Troubleshooting](/categories/troubleshooting/) archive.*
+*This article is part of the Kubernetes Troubleshooting series. For more real-world incident analysis, see the Troubleshooting archive.*

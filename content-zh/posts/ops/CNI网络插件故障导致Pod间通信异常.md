@@ -633,4 +633,4 @@ CNI 网络插件是 Kubernetes Pod 通信的基石。这次事件表明，即使
 
 ---
 
-*本文是 Kubernetes 故障排查系列的一部分。更多真实事件分析，请查看 [故障排查](/categories/troubleshooting/) 归档。*
+*本文是 Kubernetes 故障排查系列的一部分。更多真实事件分析，请查看故障排查归档。*
